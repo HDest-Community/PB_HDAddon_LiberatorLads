@@ -1,0 +1,16 @@
+version "4.4"
+
+#include "ZScript/LibZombie.zsc"
+
+class PB_HDLibZombieSpawner : EventHandler
+{
+override void CheckReplacement(ReplaceEvent e) {
+	if (!PB_LibZombie_AllowReplacement)
+		return;
+	switch (e.Replacee.GetClassName()) {
+		case 'ChaingunGuy' 	: if (!random(0, 4)) {e.Replacement = "HDZombieShockTrooperSpawn";}	break;
+		case 'ShotgunGuy' 	: if (!random(0, 9)) {e.Replacement = "HDSemiLibShockTrooper";}	break;
+		}
+	e.IsFinal = false;
+	}
+}
