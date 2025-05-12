@@ -156,8 +156,8 @@ class HDLiberatorZombie:HDHumanoid{
 			}
 			double dt=distance3d(target);
 			if(
-				target
-				&&!random(0,5)
+				//target
+				!random(0,5)
 				&&dt>300
 				&&dt<1000
 			)setstatelabel("frag");
