@@ -156,7 +156,7 @@ class HDLiberatorZombie:HDHumanoid{
 			}
 			double dt=distance3d(target);
 			if(
-				//target
+				//target (possible crash culprit)
 				!random(0,5)
 				&&dt>300
 				&&dt<1000
